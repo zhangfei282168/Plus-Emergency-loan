@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>SC Lengding Corporation.</title>
+	<link rel="apple-touch-icon" sizes="120x120" href="images/icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+  <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <a style="display:none" onclick="failed()" id="failed"></a>
+    <script>
+    function failed() {
+    Swal.fire(
+      'Login failed!',
+      'The phone or password is incorrect.',
+      'error');
+      }
+    </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+::placeholder {
+  color: #000!important;
+  opacity: 0.3!important;
+}
+body {
+  background-size: 110% 100vh;
+  background-image: linear-gradient(75deg, #15578a59, #129952b0);
+}
+.mb-5, .my-5 {
+    margin-bottom: 0rem!important;
+}
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+.container2 .input2 {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container2 input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-radius: 4px;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+.container2 .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 10px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+span {
+	font-family: 'Poppins', sans-serif;
+	color: #3c3c3c;
+	}
+input {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500!important;
+	}
+.daftar-tittle {
+	color: #000000;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	text-align: center;
+  margin-top: 1rem;
+	margin-bottom: 10px;
+	}
+.daftar {
+	color: #2F4173;
+	text-align: left;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 2rem!important;
+	}
+.indo {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	width: 80%;
+  border-radius: 20px!important;
+  background: linear-gradient(75deg, #15578aa6, #129952b0);
+  margin-top: 1rem;
+  font-weight: 600;
+	border: none;
+	outline: none;
+	}
+.btn-primary:hover {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 20px!important;
+  background-color: #129952;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  border-color: #129952;
+  border-style: solid;
+  background-origin: border-box;
+  box-shadow: 1px 2px 15px #129952;
+}
+.back {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+	font-size: 32px;
+  color: #20376d;
+	}
+  .control-checkbox {
+      width: 97%;
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+  }
+.accepted {
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif!important;
+}
+.eye-showhide {
+    position: absolute;
+    right: 3rem;
+    margin-top: 20px;
+}
+.fa-eye {
+  font-size: 26px;
+}
+.swal2-container.swal2-center>.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Poppins', sans-serif!important;
+}
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 2.25em;
+    background: initial;
+    background-color: #20376d;
+    color: #fff;
+    font-size: 1em;
+    width: 120px;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #20376d;
+    border-color: #20376d;
+}
+.question {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  font-family: 'Poppins', sans-serif!important;
+  font-size: 14px;
+  color: #fff;
+}
+.goregister {
+    color: #fff;
+    background: #175d9f;
+    cursor: pointer;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border-radius: 12px;
+    border: 0;
+    font-size: 13px;
+}
+.goregister:hover {
+    color: #fff;
+    background: #14426e;
+    cursor: pointer;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border-radius: 12px;
+    border: 0;
+}
+.x1 {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #d33c45;
+}
+.x11 {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+.x2 {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  height: 120px;
+}
+.x2 {
+  color: #00aeef;
+  font-family: 'Poppins', sans-serif!important;
+  margin-top: 6px;
+}
+.xcon {
+  position: relative;
+  text-align: right;
+  right: 12px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 95%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2rem;
+}
+</style>
+ <div class="content">
+    <div class="container">
+      <div style="text-align:center;"><img class="x1" src="images/logo.png" width="250px"></div>
+      <p class="daftar-tittle">Login or Register</p>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+
+              <form class="border-right pr-5 mb-5" method="post" name="login" onsubmit="return SubmitLogin();">
+                <div class="row"><div class="col-md-12 form-group"><span><i class="fas fa-mobile-alt"></i> Phone Number</span>
+                <input type="number" class="form-control" name="phone" placeholder="0968888988" onkeypress="if(this.value.length==12) return false;" id="phone" pattern="{}" required="true"></div></div>
+                <div class="row"><div class="col-md-12 form-group"><span><i class="fas fa-lock"></i> Password</span>
+                <div class="eye-showhide"><i class="fas fa-eye" id="togglePassword"></i></div>
+                <input type="password" name="password" class="form-control" id="id_password" placeholder="••••••••" required="true"></div></div>
+                <input name="ip_address" id="ip_address" hidden="">
+                <div class="row">
+                  <div class="col-md-12" style="text-align:center;">
+                    <button type="submit" name="login" class="btn btn-primary rounded-0 py-2 px-4 indo" onclick="GoLogin()"><i class="fas fa-sign-in-alt"></i> �&nbsp;Login</button>
+                  </div>
+                </div>
+
+                <div class="slideshow-container">
+                <div class="mySlides fade" style="display: block;">
+                  <img class="makeslide" src="images/slide1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                  <img class="makeslide" src="images/slide2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                  <img class="makeslide" src="images/slide3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                  <img class="makeslide" src="images/slide4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                  <img class="makeslide" src="images/slide5.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade" style="display: none;">
+                  <img class="makeslide" src="images/slide6.jpg" style="width:100%">
+                </div>
+                </div>
+                <div style="text-align:center;margin-top:1rem;display:none">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+  .mySlides {display: none;}
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  @media (min-width: 768px) {
+    .slideshow-container {
+      width: 100%;
+    }
+    .makeslide {
+      height: 360px;
+    }
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  .makeslide {
+    object-fit: cover;
+    border-radius: 12px;
+    height: 170px;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  </style>
+
+  <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000);
+  }
+  </script>
+  <script>
+  function GoLogin() {
+    var phone = document.getElementById('phone').value;
+    var password = document.getElementById('id_password').value;
+
+    if(!phone.match(/^.{9,}$/)) {
+      Swal.fire(
+        'Fail!',
+        '<strong style="color:#20376d;font-weight:500;">Example: 0968888988</strong><hr><strong style="color:#ea3d3d;font-weight:400;">Phone numbers must be at least 9-11 digits long.</strong>',
+        'error'
+      )
+      return false;
+   }
+  if(!password.match(/^.{6,}$/)) {
+    Swal.fire(
+      'Fail!',
+      '<strong style="color:#20376d;font-weight:500;">Example: 123456</strong><hr><strong style="color:#ea3d3d;font-weight:400;">Password length is at least 6 characters.</strong>',
+      'error'
+    )
+    return false;
+  }
+    else{
+    return true;
+  } }
+  function SubmitLogin() {
+  if (!GoLogin()) {
+    return false;
+  }
+  else {
+    submitted=true;
+    return true;
+  } }
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+  togglePassword.addEventListener('click', function (e) {
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  this.classList.toggle('fa-eye-slash');
+  });
+  </script>
+  <script>
+  $.getJSON("https://api.db-ip.com/v2/free/self", function(data) {
+  document.getElementById("ip_address").value = data.ipAddress;})
+  </script>
+  
+
+</body></html>
